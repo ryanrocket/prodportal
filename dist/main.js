@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "d9cb3f9c6039571e5172";
+/******/ 	var hotCurrentHash = "13e8aea68a26d82c3bdb";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -996,7 +996,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 var getUrl = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ../img/selfie.jpg */ "./src/img/selfie.jpg"));
 // Module
-exports.push([module.i, "h1,\nh2,\nh3,\nh4,\nh5,\np {\n\tfont-family: helvetica;\n\tcolor: #3e3e3e;\n}\n.description {\n\tfont-size: 14px;\n\tcolor: #9e9e9e;\n}\n.awful-selfie {\n\tbackground: url(" + ___CSS_LOADER_URL___0___ + ");\n\twidth: 300px;\n\theight: 300px;\n\tbackground-size: 100% auto;\n\tbackground-repeat: no-repeat;\n}\n", ""]);
+exports.push([module.i, "/*\nDefault Theme\nBy Ryan Wans\n\nTHEME OPTS:\nMain: #4C2C72\nAccent: #77867F\nGreen: #9CE37D\n*/\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n\tfont-family: helvetica;\n\tcolor: #3e3e3e;\n}\n.description {\n\tfont-size: 14px;\n\tcolor: #9e9e9e;\n}\n.awful-selfie {\n\tbackground: url(" + ___CSS_LOADER_URL___0___ + ");\n\twidth: 300px;\n\theight: 300px;\n\tbackground-size: 100% auto;\n\tbackground-repeat: no-repeat;\n}\ntester {\n\tcolor: rgb(240, 195, 72);\n}\n", ""]);
 
 
 /***/ }),
@@ -1134,6 +1134,17 @@ module.exports = function (url, needQuotes) {
 
   return url;
 };
+
+/***/ }),
+
+/***/ "./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext]!./src/img/favicon.ico":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext]!./src/img/favicon.ico ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/favicon.ico";
 
 /***/ }),
 
@@ -2889,6 +2900,63 @@ if (true) {
 
 /***/ }),
 
+/***/ "./src/html/index.html":
+/*!*****************************!*\
+  !*** ./src/html/index.html ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"shortcut icon\" href=\"#\">\n    <link rel=\"icon\" href=\"../img/favicon.ico\"/>\n</head>\n<body>\n    <h1>Expack</h1>\n    <p class=\"description\">Welcome!</p>\n    <div class=\"awful-selfie\"></div>\n</body>\n</html>";
+
+/***/ }),
+
+/***/ "./src/img sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext]!./ \\.(svg|png|ico|xml|json)$":
+/*!*****************************************************************************************************************!*\
+  !*** ./src/img sync !./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext] \.(svg|png|ico|xml|json)$ ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./favicon.ico": "./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext]!./src/img/favicon.ico"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/img sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext]!./ \\.(svg|png|ico|xml|json)$";
+
+/***/ }),
+
+/***/ "./src/img/favicon.js":
+/*!****************************!*\
+  !*** ./src/img/favicon.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var faviconsContext = __webpack_require__("./src/img sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext]!./ \\.(svg|png|ico|xml|json)$");
+
+faviconsContext.keys().forEach(faviconsContext);
+
+/***/ }),
+
 /***/ "./src/img/selfie.jpg":
 /*!****************************!*\
   !*** ./src/img/selfie.jpg ***!
@@ -2910,16 +2978,50 @@ module.exports = __webpack_require__.p + "56f3ffbcbd9d9cf925d985217de73ebc.jpg";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_logger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/logger */ "./src/js/logger.js");
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ "./src/css/style.css");
-/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _js_handle_pkg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/handle.pkg */ "./src/js/handle.pkg.js");
+/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/style.css */ "./src/css/style.css");
+/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _img_favicon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/favicon */ "./src/img/favicon.js");
+/* harmony import */ var _img_favicon__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_favicon__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _html_index_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./html/index.html */ "./src/html/index.html");
+/* harmony import */ var _html_index_html__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_html_index_html__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
 
  // Log message to console
 
-Object(_js_logger__WEBPACK_IMPORTED_MODULE_0__["default"])('A very warm welcome to Expack!'); // Needed for Hot Module Replacement
+Object(_js_logger__WEBPACK_IMPORTED_MODULE_0__["default"])('A very warm welcome to Expack!');
+_js_handle_pkg__WEBPACK_IMPORTED_MODULE_1__["default"].title(); // Needed for Hot Module Replacement
 
 if (typeof module.hot !== 'undefined') {
   module.hot.accept(); // eslint-disable-line no-undef
 }
+
+/***/ }),
+
+/***/ "./src/js/handle.pkg.js":
+/*!******************************!*\
+  !*** ./src/js/handle.pkg.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var objs = {
+  title: function title() {
+    var a = window.location.pathname;
+    var b = a.split('/')[1];
+
+    if (b === '' || a === '/') {
+      window.document.title = 'ProdPortal';
+    } else {
+      window.document.title = 'ProdPortal - ' + b;
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (objs);
 
 /***/ }),
 

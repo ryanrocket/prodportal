@@ -1,20 +1,56 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-	font-family: helvetica;
-	color: #3e3e3e;
+/*
+Default Theme
+By Ryan Wans
+
+THEME OPTS:
+Main: #4C2C72
+Accent: #77867F
+Green: #9CE37D
+*/
+
+html,
+head,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Muli', sans-serif;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	--main: #9ce37d;
+	--secn: #77867f;
+	--prim: #4c2c72;
 }
-.description {
-	font-size: 14px;
-	color: #9e9e9e;
+main {
+	width: 100%;
+	height: 100%;
 }
-.awful-selfie {
-	background: url(../img/selfie.jpg);
-	width: 300px;
-	height: 300px;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+main [header] {
+	width: 100%;
+	height: 82px;
+	top: 0;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+
+	display: flex;
+	justify-content: center;
+}
+[header] top {
+	width: 100%;
+	height: 41px;
+	background: var(--main);
+	position: absolute;
+	display: flex;
+}
+[header] bottom {
+	top: 41px;
+	width: 100%;
+	height: 41px;
+	background: #383838;
+	color: white;
+	position: absolute;
+}
+[hcol] {
+	flex-grow: 2;
+	flex-shrink: 2;
 }

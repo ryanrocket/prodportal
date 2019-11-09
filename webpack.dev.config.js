@@ -32,11 +32,19 @@ module.exports = {
 				]
 			},
 			{
+				test: /favicon\.ico$/,
+				loader: 'url',
+				query: {
+					limit: 1,
+					name: '[name].[ext]'
+				}
+			},
+			{
 				test: /\.css$/,
 				use: [ 'style-loader', 'css-loader' ]
 			},
 			{
-				test: /\.(png|svg|jpg|gif)$/,
+				test: /\.(png|svg|jpg|gif|ico)$/,
 				use: [ 'file-loader' ]
 			}
 		]

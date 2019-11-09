@@ -53,6 +53,15 @@ module.exports = {
 				use: [ { loader: 'url-loader' } ]
 			},
 			{
+				test: /favicon\.ico$/,
+				loader: 'url',
+				query: {
+					limit: 1,
+					name: '[name].[ext]'
+				},
+				use: [ { loader: 'url-loader' } ]
+			},
+			{
 				// Loads CSS into a file when you import it via Javascript
 				// Rules are set in MiniCssExtractPlugin
 				test: /\.css$/,
