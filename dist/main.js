@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "13e8aea68a26d82c3bdb";
+/******/ 	var hotCurrentHash = "c7c1dda479afdf2bee12";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -992,11 +992,8 @@ ansiHTML.reset()
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Imports
-var getUrl = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ../img/selfie.jpg */ "./src/img/selfie.jpg"));
 // Module
-exports.push([module.i, "/*\nDefault Theme\nBy Ryan Wans\n\nTHEME OPTS:\nMain: #4C2C72\nAccent: #77867F\nGreen: #9CE37D\n*/\n\nh1,\nh2,\nh3,\nh4,\nh5,\np {\n\tfont-family: helvetica;\n\tcolor: #3e3e3e;\n}\n.description {\n\tfont-size: 14px;\n\tcolor: #9e9e9e;\n}\n.awful-selfie {\n\tbackground: url(" + ___CSS_LOADER_URL___0___ + ");\n\twidth: 300px;\n\theight: 300px;\n\tbackground-size: 100% auto;\n\tbackground-repeat: no-repeat;\n}\ntester {\n\tcolor: rgb(240, 195, 72);\n}\n", ""]);
+exports.push([module.i, "/*\nDefault Theme\nBy Ryan Wans\n\nTHEME OPTS:\nMain: #4C2C72\nAccent: #77867F\nGreen: #9CE37D\n*/\n\nhtml,\nhead,\nbody {\n\twidth: 100%;\n\theight: 100%;\n\tfont-family: 'Muli', sans-serif;\n\tpadding: 0;\n\tborder: 0;\n\tmargin: 0;\n\t--main: #9ce37d;\n\t--secn: #77867f;\n\t--prim: #4c2c72;\n}\nmain {\n\twidth: 100%;\n\theight: 100%;\n}\nmain [header] {\n\twidth: 100%;\n\theight: 82px;\n\ttop: 0;\n\tdisplay: -webkit-flex;\n\t-webkit-justify-content: center;\n\n\tdisplay: flex;\n\tjustify-content: center;\n}\n[header] top {\n\twidth: 100%;\n\theight: 41px;\n\tbackground: var(--main);\n\tposition: absolute;\n\tdisplay: flex;\n}\n[header] bottom {\n\ttop: 41px;\n\twidth: 100%;\n\theight: 41px;\n\tbackground: #383838;\n\tcolor: white;\n\tposition: absolute;\n}\n[hcol] {\n\tflex-grow: 2;\n\tflex-shrink: 2;\n\tpadding: 5px;\n}\n", ""]);
 
 
 /***/ }),
@@ -1099,41 +1096,6 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (url, needQuotes) {
-  // eslint-disable-next-line no-underscore-dangle, no-param-reassign
-  url = url.__esModule ? url.default : url;
-
-  if (typeof url !== 'string') {
-    return url;
-  } // If url is already wrapped in quotes, remove them
-
-
-  if (/^['"].*['"]$/.test(url)) {
-    // eslint-disable-next-line no-param-reassign
-    url = url.slice(1, -1);
-  } // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-
-
-  if (/["'() \t\n]/.test(url) || needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, '\\n'), "\"");
-  }
-
-  return url;
-};
 
 /***/ }),
 
@@ -2907,7 +2869,7 @@ if (true) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"shortcut icon\" href=\"#\">\n    <link rel=\"icon\" href=\"../img/favicon.ico\"/>\n</head>\n<body>\n    <h1>Expack</h1>\n    <p class=\"description\">Welcome!</p>\n    <div class=\"awful-selfie\"></div>\n</body>\n</html>";
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <base href=\"/\">\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">\n    <link rel=\"icon\" href=\"/assets/favicon.ico\">\n    <meta name=\"title\" content=\"\" />\n    <meta name=\"description\" content=\"\" />\n    <meta name=\"keywords\" content=\"\" />\n    <meta name=\"revisit-after\" content=\"\" />\n    <!---->\n    <link href=\"https://fonts.googleapis.com/css?family=Muli:300,400,600&display=swap\" rel=\"stylesheet\">\n    <!---->\n</head>\n<body>\n    <main>\n        <div header>\n            <top>\n                <div hcol></div>\n                <div hcol></div>\n                <div hcol></div>\n            </top>\n            <bottom></bottom>\n        </div>\n        <div body></div>\n        <div footer></div>\n    </main>\n</body>\n</html>";
 
 /***/ }),
 
@@ -2954,17 +2916,6 @@ webpackContext.id = "./src/img sync recursive ./!./!./node_modules/file-loader/d
 var faviconsContext = __webpack_require__("./src/img sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=assets/[name].[ext]!./ \\.(svg|png|ico|xml|json)$");
 
 faviconsContext.keys().forEach(faviconsContext);
-
-/***/ }),
-
-/***/ "./src/img/selfie.jpg":
-/*!****************************!*\
-  !*** ./src/img/selfie.jpg ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "56f3ffbcbd9d9cf925d985217de73ebc.jpg";
 
 /***/ }),
 
